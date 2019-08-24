@@ -13,7 +13,6 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));  // to support URL-encoded bodies
 
 app.use("/api/auth", authRoutes);
 app.use("/api/users/:id/messages", 
