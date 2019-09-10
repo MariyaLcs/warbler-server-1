@@ -1,8 +1,10 @@
+
 const mongoose = require("mongoose");
+const DBURL = process.env.DBURL || "mongodb://localhost:27017/warbler";
 
 mongoose.set("debug", true);
 mongoose.Promise = Promise;
-mongoose.connect("mongodb://localhost:27017/warbler", {
+mongoose.connect(DBURL, {
   keepAlive: true,
   useNewUrlParser: true
 });
